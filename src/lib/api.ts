@@ -5,7 +5,7 @@ const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN || "localhost";
 const API_PORT = process.env.NEXT_PUBLIC_API_PORT || "8000";
 
 function getApiBaseUrl(): string {
-  if (typeof window === "undefined") return `http://localhost:${API_PORT}`;
+  if (typeof window === "undefined") return `http://${BASE_DOMAIN}:${API_PORT}`;
 
   const host = window.location.hostname;
   const subdomain = host.endsWith(`.${BASE_DOMAIN}`)

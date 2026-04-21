@@ -1,17 +1,4 @@
+// next.config.ts
 import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  async rewrites() {
-    return [];
-  },
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [{ key: "Access-Control-Allow-Origin", value: "*" }],
-      },
-    ];
-  },
-};
-
+const nextConfig: NextConfig = {};
 export default nextConfig;

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN || "localhost";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const hostname = request.headers.get("host") || "";
   const host = hostname.split(":")[0];
 
